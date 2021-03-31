@@ -64,7 +64,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: ShipporiMincho
+    - family: ShipporiMinchoB1
       fonts:
         - asset: fonts/ShipporiMinchoB1-Regular.ttf
           weight: 400

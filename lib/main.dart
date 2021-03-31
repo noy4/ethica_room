@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.teal,
           scaffoldBackgroundColor: Colors.teal[800],
-          fontFamily: 'ShipporiMincho'),
+          fontFamily: 'ShipporiMinchoB1'),
       routes: {
         '/': (context) => Home(),
         '/hello': (context) => HelloPage(),
