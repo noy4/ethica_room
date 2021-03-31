@@ -84,7 +84,6 @@ class EveryonesIdeaPage extends StatelessWidget {
   }
 
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
-    print(data.documentID);
     CollectionReference posts = Firestore.instance.collection('posts');
 
     return Card(
