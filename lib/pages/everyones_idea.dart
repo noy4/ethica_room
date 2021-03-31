@@ -16,7 +16,7 @@ class EveryonesIdeaPage extends StatelessWidget {
           Column(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(0, 48, 0, 4),
+                margin: EdgeInsets.only(top: 48),
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.blue,
@@ -46,7 +46,7 @@ class EveryonesIdeaPage extends StatelessWidget {
                     return _buildList(context, snapshot.data.documents);
                   }),
               Container(
-                margin: EdgeInsets.fromLTRB(0, 4, 0, 48),
+                margin: EdgeInsets.only(bottom: 48),
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.blue,
@@ -66,6 +66,7 @@ class EveryonesIdeaPage extends StatelessWidget {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 2),
       color: Colors.blue[50],
       child: Center(
         child: ConstrainedBox(

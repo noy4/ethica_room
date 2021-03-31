@@ -71,25 +71,27 @@ class _YourIdeaPageState extends State<YourIdeaPage> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 8, 0, 16),
                       child: OutlinedButton(
-                        onPressed: () {
-                          if (_formKey.currentState.validate()) {
-                            print(name.text);
-                            CollectionReference posts =
-                                Firestore.instance.collection('posts');
-                            posts.add({
-                              'name': name.text,
-                              'text': text.text,
-                              'createdAt': DateTime.now()
-                            }).then((value) {
-                              print("Post Added");
-                              setState(() {
-                                submitted = true;
-                              });
-                            }).catchError((error) {
-                              print("Failed to add post: $error");
-                            });
-                          }
-                        },
+                        onPressed: submitted
+                            ? null
+                            : () {
+                                if (_formKey.currentState.validate()) {
+                                  print(name.text);
+                                  CollectionReference posts =
+                                      Firestore.instance.collection('posts');
+                                  posts.add({
+                                    'name': name.text,
+                                    'text': text.text,
+                                    'createdAt': DateTime.now()
+                                  }).then((value) {
+                                    print("Post Added");
+                                    setState(() {
+                                      submitted = true;
+                                    });
+                                  }).catchError((error) {
+                                    print("Failed to add post: $error");
+                                  });
+                                }
+                              },
                         child: Text('送信'),
                         style: OutlinedButton.styleFrom(
                             primary: Colors.blue,
