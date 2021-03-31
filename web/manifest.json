@@ -23,6 +23,11 @@
       "src": "icons/balance_lg.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "icons/balance.png",
+      "sizes": "64x64",
+      "type": "image/png"
     }
   ]
 }
